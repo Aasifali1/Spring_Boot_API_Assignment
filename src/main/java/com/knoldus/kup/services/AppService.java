@@ -10,7 +10,7 @@ public class AppService {
     public static final long MSEC_SINCE_EPOCH = System.currentTimeMillis();
 
     public String getStatusWithTime(){
-        // Convert the milliseconds since the epoch into a
+        // Convert the milliseconds into a
         // java.util.Date object.
         Date instant = new Date( MSEC_SINCE_EPOCH );
 
@@ -19,7 +19,6 @@ public class AppService {
         SimpleDateFormat sdf = new SimpleDateFormat( "HH:mm aa" );
 
         // Define the String, time, to be our formatted
-        // view of the milliseconds since the epoch.
         String time = sdf.format( instant );
         return "Running, "+ time;
     }

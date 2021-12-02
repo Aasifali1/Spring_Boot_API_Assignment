@@ -7,11 +7,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class AppController {
+
+//    injecting AppService object
     @Autowired
     AppService appService;
 
+//    mapping request to this method
     @RequestMapping("/status")
     public String getStatusWithTime(){
+
+//        we are using AppService class here that we have created
         return appService.getStatusWithTime();
     }
+
 }
